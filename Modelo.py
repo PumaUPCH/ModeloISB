@@ -20,7 +20,7 @@ page_bg = """
 st.markdown(page_bg, unsafe_allow_html=True)
 
 # Título de la aplicación
-st.title("Modelo diferenciador entre movimientos rutinarios y arritmias cardíacas")
+st.title("Análisis de Señales ECG: Artefacto vs Arritmia")
 st.write("Sube uno o más archivos de texto con las características extraídas de tus señales para clasificarlas.")
 
 # Cargar el modelo exportado en formato .h5
@@ -62,7 +62,7 @@ if submit_button:
                 prediction = model.predict(features)
 
                 # Interpretar la predicción
-                class_names = ["Arritmia", "Rascado"]  # Ajusta según tus clases
+                class_names = ["Arritmia", "Artefacto (Rascado)"]  # Ajusta según tus clases
                 predicted_class = class_names[np.argmax(prediction, axis=1)[0]]
 
                 # Mostrar resultados
