@@ -20,13 +20,13 @@ page_bg = """
 st.markdown(page_bg, unsafe_allow_html=True)
 
 # Título de la aplicación
-st.title("Proyecto Final ISB")
+st.title("Modelo diferenciador entre movimientos rutinarios y arritmias cardíacas")
 st.write("Sube uno o más archivos de texto con las características extraídas de tus señales para clasificarlas.")
 
 # Cargar el modelo exportado en formato .h5
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("ModeloAlejo.h5") #CAMBIAR ESTO
+    return tf.keras.models.load_model("Modelo.h5") #CAMBIAR ESTO
 
 model = load_model()
 
